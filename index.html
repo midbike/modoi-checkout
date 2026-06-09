@@ -3,54 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modoi Checkout</title>
-
+  <title>Modoi T1 寵物時尚微電車｜結帳頁</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <main class="container">
+    <section class="product">
+      <h1>T1 寵物時尚微電車</h1>
+      <img src="https://placehold.co/800x500" alt="T1 寵物時尚微電車" class="product-image">
 
-  <div class="container">
+      <p class="tagline">寵物樂騎，無限可能</p>
+      <p class="description">
+        適合中大型犬、熟齡毛孩與日常外出使用，讓毛孩能安全、舒適地陪你一起探索生活。
+      </p>
 
-    <h1>T1 寵物時尚微電車</h1>
+      <div class="price-box">
+        <span>商品金額</span>
+        <strong id="totalPrice">NT$49,800</strong>
+      </div>
+    </section>
 
-    <img
-      src="https://placehold.co/600x400"
-      alt="T1"
-      class="product-image"
-    >
+    <section class="checkout">
+      <h2>購買資料</h2>
 
-    <h2>NT$49,800</h2>
+      <form id="checkoutForm">
+        <label>
+          購買方案
+          <select id="productPlan" name="productPlan" required>
+            <option value="T1 標準版" data-price="49800">T1 標準版｜NT$49,800</option>
+            <option value="T1 加金屬運輸籃" data-price="56800">T1 加金屬運輸籃｜NT$56,800</option>
+            <option value="T1 預付訂金" data-price="5000">T1 預付訂金｜NT$5,000</option>
+          </select>
+        </label>
 
-    <p>
-      適合中大型犬外出使用，
-      讓毛孩與主人一起探索更多風景。
-    </p>
+        <label>
+          數量
+          <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+        </label>
 
-    <form>
+        <label>
+          姓名
+          <input type="text" name="customerName" required>
+        </label>
 
-      <input
-        type="text"
-        placeholder="姓名"
-      >
+        <label>
+          手機
+          <input type="tel" name="phone" required>
+        </label>
 
-      <input
-        type="tel"
-        placeholder="手機"
-      >
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
 
-      <input
-        type="email"
-        placeholder="Email"
-      >
+        <label>
+          LINE ID
+          <input type="text" name="lineId">
+        </label>
 
-      <button type="submit">
-        前往付款
-      </button>
+        <label>
+          配送地址
+          <textarea name="address" rows="3" required></textarea>
+        </label>
 
-    </form>
+        <label>
+          統一編號 / 發票抬頭
+          <input type="text" name="invoice">
+        </label>
 
-  </div>
+        <label>
+          備註
+          <textarea name="note" rows="3"></textarea>
+        </label>
 
+        <button type="submit">前往信用卡付款</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
