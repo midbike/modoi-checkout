@@ -1,0 +1,32 @@
+body{
+  font-family:sans-serif;
+  background:#f7f7f7;
+  margin:0;
+}
+
+.container{
+  max-width:700px;
+  margin:auto;
+  padding:30px;
+  background:white;
+}
+
+.product-image{
+  width:100%;
+  border-radius:10px;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  background:black;
+  color:white;
+  cursor:pointer;
+}
